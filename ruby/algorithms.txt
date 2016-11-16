@@ -1,0 +1,83 @@
+ALGORITHM FOR AN ELEVATOR:
+
+-Approach call Botton on elevator. 
+-If you wish to go up:
+	-Press navigation up.
+-Otherwise:
+	-Press navigation down.
+-Wait until elevator arrives and doors open completely.
+-If people are on elevator when doors open:
+	-Wait until doorway it is clear .
+-Otherwise:	
+	-Move into Elevator with caution.
+		-Say “Excuse me” when entering elevator.
+-For each button listed on the elevator.  
+	-Identify the rows and coulombs grid provided.
+	-Sort the numbers on each button from lowest to highest.
+	-Identify the buttons with non-numerical values.
+-Process what floor you would like to go to.
+-Navigate arm over lowest value to Highest value:
+	-If numerical Botton value is not desired destination:
+		-Move to the next highest value.
+	-Otherwise:
+		-Press gently until light appears over desired destination.
+-Wait until elevator arrives and doors open completely.
+-Process number on numerical floor panel above elevator:
+	-If numerical value above door is not desired destination:
+		-Wait and move to the next value.
+	-Otherwise numerical value above door is desired destination:
+		-Wait for doors to completely open before exiting with caution.
+			-Say “Excuse me” upon exiting.
+
+MAKING A PENUT BUTTER AND JELLY SANDWICH:
+
+-Identify kitchen layout.
+-Navigate Cabinet directory for “plate”:
+	-If cabinet directory “plate” value is true:
+		-grab “plate” gently.
+	-Else if:
+		-Search different cabinet directory.
+	-Otherwise:
+		-Check Dish-washer directory.
+-Close all Cabinet directories.
+-Navigate toward Prep station.
+-Place “plate” gently in cleared workstation.
+-Navigate Sliding-Drawer Directories about the kitchen layout for “butter-knife”
+	-If Sliding-Drawer directory “butter-knife” value is true:
+		-grab “butter-knife” gently by the handle.
+	-Else if:
+		-Search different Sliding-Drawer directory.
+	-Otherwise:
+		-Check Dish-washer directory.
+-Navigate toward Prep station.
+-Place “butter knife in clear space near plate.
+-Navigate Cabinet directory for ingredients listed “peanut-butter”, “jelly”, or “white bread”:
+	-For each ingredient listed “peanut-butter”, “jelly”, or “white bread”:
+		-grab “peanut-butter”, “jelly”, or “white bread” gently one at a time.
+		-Place ingredient at cleared space at workstation.
+		-mark off ingredient as placed at workstation.
+	-Until no ingredients are left to grab from list:
+		-Close all Cabinet directories
+		-Move to organized workstation.
+-Identify ingredients in front of you.
+	-If “white bread” is true: 
+		-grab slices 2x desired about for sandwiches to make.
+		-place side by side on top of value “plate”.
+		-Identify left “left-white-bread”
+		-Identify right “right-white-bread”
+-Next identify value “peanut-butter”
+	-If “peanut-butter” value is true:
+		-Scoop moderate value “peanut-butter” with value “butter-knife”
+		-Spread across “left-white-bread” evenly until fully covered.
+-Next identify value “jelly”
+	-If “jelly” value is true:
+		-Scoop hefty value “jelly” with value “butter-knife”
+		-Spread across “right-white-bread” evenly until fully covered.
+-Place “butter-knife” on plate
+-Fold carefully “left-slice-bread” over “right-slice-bread”
+-Cut in half Diagonally using “butter-knife”
+-Place “butter-knife” in Dish-washer directory.
+-Eat and Enjoy.
+-Place “plate” in Dish-washer directory.
+
+	
