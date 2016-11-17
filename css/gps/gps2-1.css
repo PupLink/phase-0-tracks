@@ -1,0 +1,48 @@
+header{
+background: rgba(80,80,80,0.6);
+padding: 2em ;
+margin:auto;
+width: 80%;
+border: double 5px;
+
+}
+h1{
+	font-family: sans-serif;
+	font-size: 42px;
+}
+h2{
+	font-family: sans-serif;
+	font-size: 32px;
+}
+body{
+background-image: url(https://s-media-cache-ak0.pinimg.com/originals/0b/7e/62/0b7e6270924187aed96a8f8c5ae37c63.jpg);
+background-repeat: no-repeat;
+background-color: lightblue;
+background-blend-mode: 
+background: 
+background-position: right;
+background-attachment: fixed;
+}
+
+footer{
+background-color:;
+padding: 2em ;
+margin:auto;
+width: 50%;
+clear: left;
+
+}
+
+.column-1{
+background-color: ;
+float: left;
+width:50%;
+
+}
+.column-2{
+background-color: ;
+float: left;
+width: 50%;
+
+}
+
