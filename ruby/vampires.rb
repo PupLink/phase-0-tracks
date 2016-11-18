@@ -1,15 +1,19 @@
 
-vampire_count = 0
-human_count = 5
+vampire = 0
 
 puts "Hello and welcome to DevSteel Corp.! how many employees are being interview today?"
+people_staged = gets.chomp.to_i
+people_interviewed = 0
+until people_interviewed == people_staged
 
-people_interviewed
 
-puts "What is your name?"
-name = gets.chomp
+puts "Hello there, what is your name?"
+name = gets.chomp.downcase
+	if name == "Drake Cula" || name == "Tu Fang"
+		vampire += 10
+	else
 
-puts "How old are you?"
+puts "Nice to meet you #{name} How old are you?"
 age = gets.chomp.to_i
 
 valid_input = false
@@ -32,6 +36,7 @@ elsif actual_age <= age
 
 else actual_age >= age 
 	puts "Ok, lets move on..."
+	 vampire += 1
 	valid_input = true
 
 end
@@ -50,6 +55,7 @@ if garlic == "yes"
 elsif garlic == "no"
 	puts "No worries, itallian food is not for everyone"
 	valid_input = true
+	vampire +=1
 
 else 
 	puts "just a yes or no will surfice"
@@ -75,12 +81,21 @@ else
 	valid_input = false	
 	
 end
-
 end
+	puts "Thankyou for you interest in DevSteel corp."
+people_interviewed += 1
 
 
-
-
-
-
-
+	if vampire > 4
+		puts "Definitely a vampire"
+	elsif vampire == 4
+		puts "almost certianly a vampire"
+	elsif vampire == 3
+		puts "probably a vampire"
+	elsif vampire == 2
+		puts "probably not a vampire"
+	else vampire == 1
+		puts "results inconclusive"
+	end
+end
+end
