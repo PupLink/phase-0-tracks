@@ -1,28 +1,6 @@
-
-class Hamster
-
-def name 
-	@name
-end
-def color
-	@color
-end
-def age
-	@age
-end
-def volume
-	@volume
-end
-def approval
-	@approval
-end
-end
-
-the_hamster = Hamster.new
-
 puts "What is this hamster's a name."
 name = gets.chomp 
-the_hamster.name = name
+name = name
 
 puts "awe! #{name}, such a cute little fuzzball"
 
@@ -30,18 +8,18 @@ puts "awe! #{name}, such a cute little fuzzball"
 	
 	until valid_input
 puts "on a volume scale of 1-10 how loud is your hamster?"
-the_hamster.volume = gets.chomp.to_i
+volume = gets.chomp.to_i
 	
-	if the_hamster.volume >= 1 and volume <= 4
+	if volume >= 1 and volume <= 4
 		puts "A quiet friend, we can find a home for #{name} in no time, even if they are about #{volume} loud."
 		valid_input = true
 	
 	elsif 
-		the_hamster.volume == 5 || volume == 6
+		volume == 5 || volume == 6
 		puts "An average little hamster, im sure we can find #{name} a home in no time, most people have hamsters around #{volume}."
 		valid_input = true
 	elsif 
-		the_hamster.volume >= 7 and volume <= 10
+		volume >= 7 and volume <= 10
 		puts "A cute little cherper, a lot of people do like the excentric type, #{name} will find a place in no time, even if he is around #{volume}!"
 		valid_input = true
 	else
@@ -52,9 +30,9 @@ puts "what color is your hamster?"
 color = gets.chomp
 
 puts "do you have an estimate on how old #{name} is? If no press enter to continue."
-	age = gets.chomp
-	if age == nil 
-		puts "no worries, we can take care of this later"
+	age = gets.chomp.to_i
+	if age == 0
+		puts "no worries, we can leave this blank"
 
 	else 
 		puts "a #{color} #{name} about age #{age}, thank you for all the information."
@@ -76,4 +54,19 @@ approval = gets.chomp.downcase
 	valid_input = false
 	end
 end
- puts "Thank you for using out Adoption Bot 3000"
+ puts "Final entry... "
+ puts "#{name} is our latest entry to our systems.
+He is a #{color} fuzzy friends with a voice around #{volume} on our scale of 1- 10.
+"
+if age == 0
+	puts "#{name}'s age is undetermined and should be kept in mind when medical paper is being filled out."
+else 
+	puts "our record here states that #{name} is about #{age} years old."
+end
+
+if approval == "yes"
+	puts "The previouse owner has trusted a capability for adoption and will be placed accordingly in the shelter."
+else
+	puts "The previouse owner has marked that adoption is not recommended for this hamster."
+end
+
