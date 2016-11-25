@@ -56,7 +56,7 @@ approval = gets.chomp.downcase
 end
  puts "Final entry... "
  puts "#{name} is our latest entry to our systems.
-He is a #{color} fuzzy friends with a voice around #{volume} on our scale of 1- 10.
+He is a #{color} fuzzy friend with a voice around #{volume} on our scale of 1-10.
 "
 if age == 0
 	puts "#{name}'s age is undetermined and should be kept in mind when medical paper is being filled out."
