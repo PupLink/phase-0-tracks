@@ -1,7 +1,13 @@
-#population density is number of people per square mile as of 2012
-#this data is updated every year with estimates from a 10 year census
+# population density is number of people per square mile as of 2012
+# this data is updated every year with estimates from a 10 year census
 
+# STATE_DATA is a constant varriable, therfor it is in all caps  
+# syntax style 1: 'state' => {example} (string is key)
+# syntax style2: 'symbol:' is constant, (it is an unchanging variable)
 
+# 
+# 
+# 
 STATE_DATA = {
   "Alabama" => {population_density: 94.65, population: 4822023},
   "Alaska" => {population_density: 1.1111, population: 731449},
