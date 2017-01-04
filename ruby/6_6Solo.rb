@@ -1,3 +1,5 @@
+#Added more content in words, playing around with the family for christmas...
+
 # was looking at a better way to store words and found '%w' to be a huge help
 words = %w"dragon dungeon bear goblin spider queen traps unicorn programmer treasure gold silver princess fairy potion poison light copper knight thief magus fantasy castle skeleton lair princess evil good goblin sorceress witch mystery maps quest adventure armor weapon spirit ghost slime monster potion excalibuar keyblade"
 total_chances = 6
