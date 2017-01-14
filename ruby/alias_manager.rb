@@ -1,36 +1,42 @@
-# Calculator method needs 3 paramaters
-
-puts "Type alias until satisfied...\nEnter 'done' to quit."
-
-result = 0
-def calc (num1, num2)
-	while true
-		print ">>  First and Last name please... " 
-    str = gets.chomp.split('')  # splits into array, rejects blanks
-    return if str[0] == "done"  # quit if first element is 'done'
-
-    num1 = str[0].to_s
-    num2 = str[1].to_s
-
-# make an array for vowel placment
-    vowels = ["a", "e", "i", "o", "u"]
-
-# push letters forward 1
-    letters = "bcdfghjklmnpqrstvwxyz".split('')
-    letters.class
-    letters.map! { |letter| letter.next}
-
-# iterate through the array with .each
-
-p str.map! { |letter| letter.next}.join('')
+# Take an name
+# swap the first and last name
+# change the vowels (a,e,i,o,u) => (e,i,o,u,a)
+#change the alphabet using .next ~letters.map! { |letter| letter.next}
 
 
+puts "What is your first name?"
+first_name = gets.chomp.downcase
+puts "what is your last name?" 
+last_name = gets.chomp.downcase
+name = (last_name + " " +first_name).split('')
+
+
+        
+
+name.map! {|letter| letter.next}
+new_name = name.join
+vowels = ["a", "e", "i", "o", "u"]
+
+if
+    new_name == "a" 
+    new_name.map! {|letter| letter.next}
+elsif
+    new_name == "e" 
+    new_name.map! {|letter| letter.next}
+elsif 
+    new_name == "i" 
+    new_name.map! {|letter| letter.next}   
+elsif 
+    new_name == "o" 
+    new_name.map! {|letter| letter.next}
+elsif 
+    new_name == "u" 
+    new_name.map! {|letter| letter.next}
+else
+    
 end
 
-
-end
-
-calc(0, 0) 
+p new_name
+puts "hope you had fun..."
 
 
-p "hope you had fun..."
