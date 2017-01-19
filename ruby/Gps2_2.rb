@@ -1,59 +1,65 @@
-# Method to create a list
-# "carrots apples cereal pizza"
+# Method to create a list.
 # input: string of items separated by spaces (example: "carrots apples cereal pizza")
-# output: [what data type goes here, array or hash?]
-  
-def grocery_list(items)
-  list = {}
-  items.split(" ").each {|x| list[x] = 1}
-  list
+# steps: 
+  # Define a method
+  # set default quantity
+  # print the list to the console [can you use one of your other methods here?]
+# output: Hash
+
+def grocery_list(groceries)
+	list ={}
+		groceries.split(" ").each {|item| list[item] = 1}
+	 list 
 end
 
-our_list = grocery_list("carrots apples cereal pizza") 
+our_list = grocery_list("carrots apples pizza cereal")
 
-# input: item name and optional quantity
+
+
+# Method to add an item to a list
+# input: list, item name, and optional quantity
+# steps: define method that pushes items into list hash.
+# output: 
+
 def add_item(list, new_item)
-  list[new_item] = 1
+	list[new_item] = 1
 end
 
-add_item(our_list, "waffles")
+add_item(our_list, "bananas")
 p our_list
 
 # Method to remove an item from the list
-def del_item(list, item_to_del)
-  list.delete(item_to_del)
+# input: delete item. 
+# steps: define method that removes item from list.
+# output: 
+
+def remove_item(list, delete_item)
+	list.delete(delete_item)
 end
-
-del_item(our_list, "pizza")
+remove_item(our_list, "carrots")
 p our_list
-
 
 # Method to update the quantity of an item
-def update_quant(list, item, new_quantity)
-  list[item] = new_quantity
+# input: Three inputs:list,item,quantity
+# steps: define a method that uses three parameters to update a quantity.
+# output:
+
+#this step can also take the place of add new item
+
+def update_quantity(list, updated_item, quantity=1)
+	list[updated_item] = quantity
 end
-
-update_quant(our_list, "waffles", 3)
+update_quantity(our_list, "bananas")
 p our_list
-
-
 # Method to print a list and make it look pretty
+# input: 
+# steps: define a method that iterates through a hash using .each.
+# output: nicely printed list.
 
-#get a new grocery list
-
-our_list = grocery_list("Lemonade Tomatoes Onions Ice_Cream")
-p our_list
-
-update_quant(our_list, "Lemonade", 2)
-update_quant(our_list, "Tomatoes", 3)
-update_quant(our_list, "Ice_Cream", 4)
-
-
-del_item(our_list, "Lemonade")
-
-
-update_quant(our_list, "Ice_Cream", 1)
- p our_list
+def print_list(list)
+	list.each {|item, quantity| puts "you have #{quantity} #{item}."}
+end
+print_list(our_list)
 
 
 #Release 4: Reflect
@@ -76,7 +82,6 @@ update_quant(our_list, "Ice_Cream", 1)
 	#by using the name of the method in other pieces of code
 
 # What concepts were solidified in this challenge, and what concepts are still confusing?
-	#I really Hated the way most things were explained this week, for somthing as important as arrays and hashes i feel this week could have been a little more friendly with information, rather than making people struggle with online research... 
-	#i know it is vital to have search and "do it yourself" skills but man this was the hardest most challengin and frustrating week... especally with thanks giving the same week...
+	#I honestly found explainig how functions work as a navigator is really challenging, somthing so simple explained in context sing the proper vocabulary is not always the easiest thing to do... 
 
 	
