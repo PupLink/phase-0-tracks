@@ -1,15 +1,20 @@
 class List
+
+	def initiate
+		list
+	end
 	def get_items
-		List.new = ["do the dishes", "mow the lawn"]
-		p List
+		list = ["do the dishes", "mow the lawn"]
 	end 
-	def add_item
+	def add_item(item)
+		list << [item]
 	end
-
-	def del_item
+	def delete_item(item)
+		list.delete(item)
 	end
-
-	def retrieve_item(item)
+	def get_item(item)
+		list.select {item}
 	end
+end 
 
-end
+# i dont know how to fix my name error :(
