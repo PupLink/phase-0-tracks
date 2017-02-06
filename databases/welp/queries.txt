@@ -1,0 +1,64 @@
+to Join 3 tables
+
+sqlite> SELECT * FROM users
+   ...> ;
+1|Bradford|Pitt
+2|Mandy|Kaling
+3|Angela|Jolie
+4|Steven|Wonder
+5|Holly|Berry
+6|Marryl|Streepman
+7|Denzel|George
+sqlite> SELECT * FROM businesses
+   ...> ;
+1|Grundy Hollow Wedding Chaple
+2|Amir's Towing
+3|The Beagle Nightclub
+4|Lotus Yoga
+5|Plumbing by Janet
+6|Sushi World
+7|JoeBob's Sportz Barn
+sqlite> SELECT * FROM reviews
+   ...> ;
+1|5|great food|1|1
+2|1|got towed in a zone before towing hours!|2|5
+3|4|Had a wonderful time here, would come back again|4|7
+4|2|the place was small and a dank hole in the wall, but if thats the thing you are into...|3|3
+sqlite> SELECT * FROM users, reviews, businesses
+   ...> ;
+
+(My screen blew up with a lot of information that was unjoined)
+
+sqlite> SELECT reviews, businesses.name, users FROM reviews JOIN businesses ON reviews.business_id = business.id;
+Error: no such column: reviews
+sqlite> SELECT users, busniness.name FROM reviews JOIN users JOIN businesses ON reviews.user_id = users.id ON reviews.business_id = businesses.id;
+Error: near "ON": syntax error
+sqlite> SELECT * reviews, users.firstname, busniness.name FROM reviews JOIN users JOIN businesses ON reviews.user_id = users.id ON reviews.business_id = businesses.id;
+Error: near "reviews": syntax error
+sqlite> SELECT reviews.* , users.firstname, busniness.name FROM reviews JOIN users JOIN businesses ON reviews.user_id = users.id ON reviews.business_id = businesses.id;
+Error: near "ON": syntax error
+sqlite> SELECT reviews.* , users.firstname, busniness.name FROM reviews JOIN users ON reviews.user_id = users.id AND JOIN businesses ON reviews.business_id = businesses.id;
+Error: near "JOIN": syntax error
+sqlite> SELECT reviews.* , users.firstname, busniness.name FROM reviews JOIN users ON reviews.user_id = users.id, JOIN businesses ON reviews.business_id = businesses.id;
+Error: near "JOIN": syntax error
+sqlite> SELECT reviews.* , users.first_name, businesses.name FROM reviews JOIN users ON reviews.user_id = users.id JOIN businesses ON reviews.business_id = businesses.id;
+1|5|great food|1|1|Bradford|Grundy Hollow Wedding Chaple
+2|1|got towed in a zone before towing hours!|2|5|Holly|Amir's Towing
+3|4|Had a wonderful time here, would come back again|4|7|Denzel|Lotus Yoga
+4|2|the place was small and a dank hole in the wall, but if thats the thing you are into...|3|3|Angela|The Beagle Nightclub
+sqlite> SELECT reviews.* , users.first_name, users.last_name, businesses.name FROM reviews JOIN users ON reviews.user_id = users.id JOIN businesses ON reviews.business_id = businesses.id;
+1|5|great food|1|1|Bradford|Pitt|Grundy Hollow Wedding Chaple
+2|1|got towed in a zone before towing hours!|2|5|Holly|Berry|Amir's Towing
+3|4|Had a wonderful time here, would come back again|4|7|Denzel|George|Lotus Yoga
+4|2|the place was small and a dank hole in the wall, but if thats the thing you are into...|3|3|Angela|Jolie|The Beagle Nightclub
+sqlite> SELECT reviews.stars, reviews.comment , users.first_name, users.last_name, businesses.name FROM reviews JOIN users ON reviews.user_id = users.id JOIN businesses ON reviews.business_id = businesses.id;
+5|great food|Bradford|Pitt|Grundy Hollow Wedding Chaple
+1|got towed in a zone before towing hours!|Holly|Berry|Amir's Towing
+4|Had a wonderful time here, would come back again|Denzel|George|Lotus Yoga
+2|the place was small and a dank hole in the wall, but if thats the thing you are into...|Angela|Jolie|The Beagle Nightclub
+sqlite>
+
+
+
+
+
