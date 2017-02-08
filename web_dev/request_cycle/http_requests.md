@@ -4,7 +4,7 @@
   * 404 'Not Found' - the server has not found anything matching the Request-URI. no condition is given if temporary or permanent.
   * 403 'Forbidden' - The Server is refusing to fulfill the request, even though the request was understood.
   * 300 'Multiple Choice' - The requested resource has different choices and cannot be resolved into one. For example, there may be several index.html pages depending on which language is wanted (such as German).
-  * 302 'Found'- The requested recource resides temporarily under a different URI.
+  * 302 'Found'- The requested resource resides temporarily under a different URI.
 
   * 400 'Bad Request'\ - The request could not be understood by the server due to malformed syntax. the client SHOULD not repeat the request without modifications.
 
