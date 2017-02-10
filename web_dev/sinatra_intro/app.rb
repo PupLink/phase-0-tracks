@@ -47,7 +47,7 @@ end
 # write a GET rout that retrieves contacts
 # a particular student
 
-get '/students/:id' do
+get 'location/students/:id' do
   student = db.execute("SELECT * FROM student")
   responce = ""
   student.each do  |information|
@@ -59,4 +59,12 @@ end
 
 # write a GET rout that takes a
 # student as a query paramater and says 'Good Job, [person's name]!
+
+get 'compliment/person' do
+  person = params[:person]
+  "Good Job #{person}!"
+end
+
+
+
 
