@@ -39,8 +39,24 @@ end
 
 # write a GET route that retrieves
 # a particular student
-
 get '/students/:id' do
   student = db.execute("SELECT * FROM students WHERE id=?", [params[:id]])[0]
   student.to_s
 end
+
+# write a GET rout that retrieves contacts
+# a particular student
+
+get '/students/:id' do
+  student = db.execute("SELECT * FROM student")
+  responce = ""
+  student.each do  |information|
+    responce << "ID: #{student['id']}<br>"
+    responce << "Campus: #{student['campus']}<br>"
+  end
+  response
+end
+
+# write a GET rout that takes a
+# student as a query paramater and says 'Good Job, [person's name]!
+
